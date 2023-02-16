@@ -1,0 +1,12 @@
+[ 16.02.2023 20:54:09 ] Error message: Undefined constant "amp\This" | File: C:\OSPanel\domains\php-ishop.loc\vendor\amp\ErrorHandler.php | Line: 18 
+ ==== 
+[ 16.02.2023 20:56:33 ] Error message: Random exeption | File: C:\OSPanel\domains\php-ishop.loc\public\index.php | Line: 11 
+ ==== 
+[ 16.02.2023 20:56:55 ] Error message: Random exeption | File: C:\OSPanel\domains\php-ishop.loc\public\index.php | Line: 11 
+ ==== 
+[ 16.02.2023 20:57:35 ] Error message: Random exeption | File: C:\OSPanel\domains\php-ishop.loc\public\index.php | Line: 11 
+ ==== 
+[ 16.02.2023 20:57:54 ] Error message: Random exeption | File: C:\OSPanel\domains\php-ishop.loc\public\index.php | Line: 11 
+ ==== 
+[ 16.02.2023 20:58:02 ] Error message: Random exeption | File: C:\OSPanel\domains\php-ishop.loc\public\index.php | Line: 11 
+ ==== 
