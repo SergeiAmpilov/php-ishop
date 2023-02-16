@@ -1,0 +1,16 @@
+{
+    "name": "serge/php-ishop.loc",
+    "autoload": {
+        "psr-4": {
+            "amp\\": "vendor/amp",
+            "app\\": "app"
+        }
+    },
+    "authors": [
+        {
+            "name": "Sergei Ampilov",
+            "email": "sergei.ampilov@gmail.com"
+        }
+    ],
+    "require": {}
+}
