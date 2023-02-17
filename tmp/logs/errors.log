@@ -12,3 +12,5 @@
  ==== 
 [ 17.02.2023 16:25:47 ] Error message: Undefined array key "action" | File: C:\OSPanel\domains\php-ishop.loc\vendor\amp\Router.php | Line: 47 
  ==== 
+[ 17.02.2023 17:06:37 ] Error message: Too few arguments to function amp\Router::amp\{closure}(), 1 passed and exactly 2 expected | File: C:\OSPanel\domains\php-ishop.loc\vendor\amp\Router.php | Line: 71 
+ ==== 

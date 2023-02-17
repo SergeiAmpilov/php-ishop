@@ -69,14 +69,9 @@ class Router
     protected static function upperCamelCase($name, bool $skipFirst = false): string
     {
         $arStr = explode('-', $name);
-        $arCap = array_map(function($item) use (&$skipFirst) {
-            if ($skipFirst) {
-                $skipFirst = false;
-                return $item;
-            }
-            return ucfirst($item);
-        }, $arStr);
-        return implode($arCap);
+        $arCap = array_map('ucfirst', $arStr);
+        $newStr = implode($arCap);
+        return $skipFirst ? lcfirst($newStr) : $newStr;
     }
 
 
