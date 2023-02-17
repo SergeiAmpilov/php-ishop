@@ -7,7 +7,7 @@ if (PHP_MAJOR_VERSION < 8) {
 require_once dirname(__DIR__). '/config/init.php';
 
 new \amp\App();
-
+debug(\amp\Router::getRoutes());
 ?>
 
 <!DOCTYPE html>
@@ -22,3 +22,11 @@ new \amp\App();
   <h1>Hello world</h1> 
 </body>
 </html>
+
+
+<style>
+    body {
+        background-color: #404040;
+        color: wheat;
+    }
+</style>

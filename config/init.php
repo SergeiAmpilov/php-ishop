@@ -15,3 +15,5 @@ define('ADMIN', 'http://php-ishop.loc/admin');
 define('NO_IMAGE', 'uploads/no-image.jpg'); /* default image */
 
 require_once(ROOT . '/vendor/autoload.php');
+require_once(HELPERS . '/functions.php');
+require_once(CONFIG . '/routes.php');
