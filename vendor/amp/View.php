@@ -12,7 +12,7 @@ class View
         public $route,
         public string | bool $layout = '',
         public $view = '',
-        public $mets = []
+        public $meta = []
     )
     {
         if ($this->layout !== false) {
@@ -44,6 +44,15 @@ class View
                 throw new \Exception("Not found layout $layout_file", 500);
             }
         }
+    }
+
+    public function getMeta()
+    {
+        $out = '<title>' . h($this->meta['title']) . '</title>' . PHP_EOL;
+        $out .= '<meta name="description" content="' . h($this->meta['description']) . '">';
+        $out .= '<meta name="keywords" content="' . h($this->meta['keywords']) . '">';
+
+        return $out;
     }
 
 }

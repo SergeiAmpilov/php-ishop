@@ -11,7 +11,7 @@ class MainController extends Controller
 
     public function indexAction()
     {
-//        $this->layout = 'test';
-//        debug(__METHOD__);
+        $this->setMeta('Main page', 'Main page of ishop', 'keywords');
+
     }
 }
