@@ -12,6 +12,9 @@ class MainController extends Controller
     public function indexAction()
     {
         $this->setMeta('Main page', 'Main page of ishop', 'keywords');
+        $this->set([
+            'test' => 'hello test data',
+        ]);
 
     }
 }
