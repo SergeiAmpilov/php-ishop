@@ -8,6 +8,7 @@ class Router
 {
     protected static array $routes = [];
     protected static array $route = []; /* admin_prefix, controller, action */
+    protected static array $queryParams = [];
 
     public static function add($regexp, $route = [])
     {
@@ -26,6 +27,9 @@ class Router
 
     public static function dispatch($url)
     {
+
+        $url = self::removeQueryString($url);
+
         if (self::matchRoute($url)) {
             $controller = 'app\controllers\\' . self::$route['admin_prefix']
                             . self::$route['controller'] . 'Controller';
@@ -83,6 +87,26 @@ class Router
         $arCap = array_map('ucfirst', $arStr);
         $newStr = implode($arCap);
         return $skipFirst ? lcfirst($newStr) : $newStr;
+    }
+
+    protected static function removeQueryString(string $url): string
+    {
+        $arStr = explode('&', $url);
+
+        if(!empty($arStr[0]) && str_contains($arStr[0], '=')) {
+            $firstParamIndex = 0;
+            $resUrl = '';
+        } else {
+            $firstParamIndex = 1;
+            $resUrl = $arStr[0] ?? '';
+        }
+
+        for ($i = $firstParamIndex; $i < count($arStr); $i++) {
+            [$k, $v] = explode('=', $arStr[$i]);
+            self::$queryParams[$k] = $v;
+        }
+
+        return $resUrl;
     }
 
 
