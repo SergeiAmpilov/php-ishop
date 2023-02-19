@@ -10,7 +10,7 @@ abstract class Controller
     public array $meta = [];
     public string | false $layout = ''; /* false - for AJAX request */
     public string $view = '';
-    public object $model;
+    public object | string $model;
 
 
 
@@ -22,17 +22,19 @@ abstract class Controller
     public function getModel()
     {
         $model = 'app\models\\' . $this->route['admin_prefix'] . $this->route['controller'];
+        $this->model = $model;
 
-        if (class_exists($model)) {
-            $this->model = new $model();
-        } else {
-            throw new \Exception("No such model $model", 404);
-        }
+//        if (class_exists($model)) {
+//            $this->model = new $model();
+//        } else {
+//            throw new \Exception("No such model $model", 404);
+//        }
     }
 
     public function getView()
     {
         $this->view = $this->view ?: $this->route['action'];
+        (new View($this->route, $this->layout, $this->view, $this->meta))->render($this->data);
     }
 
     public function set($data)

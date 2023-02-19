@@ -10,7 +10,7 @@ class MainController extends Controller
 {
     public function indexAction()
     {
-        debug(__METHOD__);
+//        debug(__METHOD__);
     }
 
 }

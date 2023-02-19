@@ -11,8 +11,7 @@ class MainController extends Controller
 
     public function indexAction()
     {
-        debug(__METHOD__);
-        debug($this->route);
-        debug($this->model);
+//        $this->layout = 'test';
+//        debug(__METHOD__);
     }
 }

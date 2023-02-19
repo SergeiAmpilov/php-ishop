@@ -10,12 +10,12 @@ class PageController extends Controller
 {
     public function indexAction()
     {
-        debug(__METHOD__);
+//        debug(__METHOD__);
     }
 
     public function viewAction()
     {
-        debug(__METHOD__);
+//        debug(__METHOD__);
     }
 
 }
