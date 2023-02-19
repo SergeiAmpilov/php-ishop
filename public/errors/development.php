@@ -26,3 +26,10 @@
     <p>Resp Code: <?= $responseCode ?></p>
 </body>
 </html>
+
+<style>
+    body {
+        background-color: #404040;
+        color: rosybrown;
+    }
+</style>

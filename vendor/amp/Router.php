@@ -7,7 +7,7 @@ namespace amp;
 class Router
 {
     protected static array $routes = [];
-    protected static array $route = []; /* controller => action */
+    protected static array $route = []; /* admin_prefix, controller, action */
 
     public static function add($regexp, $route = [])
     {
@@ -27,9 +27,22 @@ class Router
     public static function dispatch($url)
     {
         if (self::matchRoute($url)) {
-            echo 'OK';
+            $controller = 'app\controllers\\' . self::$route['admin_prefix']
+                            . self::$route['controller'] . 'Controller';
+
+            if (class_exists($controller)) {
+                $controllerObject = new $controller(self::$route);
+                $action = self::$route['action'] . 'Action';
+                if (method_exists($controllerObject, $action)) {
+                    $controllerObject->$action(); // call method
+                } else {
+                    throw new \Exception("Method $action in controller $controller not found", 404);
+                }
+            } else {
+                throw new \Exception("Controller $controller not found", 404);
+            }
         } else {
-            echo ' No';
+            throw new \Exception("Page not found", 404);
         }
 
     }
@@ -57,9 +70,7 @@ class Router
                     $route['action'] = self::upperCamelCase($route['action'], true);
                 }
 
-                debug($route);
-
-
+                self::$route = $route;
                 return true;
             }
         }

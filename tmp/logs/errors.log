@@ -14,3 +14,31 @@
  ==== 
 [ 17.02.2023 17:06:37 ] Error message: Too few arguments to function amp\Router::amp\{closure}(), 1 passed and exactly 2 expected | File: C:\OSPanel\domains\php-ishop.loc\vendor\amp\Router.php | Line: 71 
  ==== 
+[ 19.02.2023 11:41:35 ] Error message: Page not found | File: C:\OSPanel\domains\php-ishop.loc\vendor\amp\Router.php | Line: 46 
+ ==== 
+[ 19.02.2023 11:41:46 ] Error message: Page not found | File: C:\OSPanel\domains\php-ishop.loc\vendor\amp\Router.php | Line: 46 
+ ==== 
+[ 19.02.2023 11:42:41 ] Error message: Page not found | File: C:\OSPanel\domains\php-ishop.loc\vendor\amp\Router.php | Line: 46 
+ ==== 
+[ 19.02.2023 11:42:52 ] Error message: Page not found | File: C:\OSPanel\domains\php-ishop.loc\vendor\amp\Router.php | Line: 46 
+ ==== 
+[ 19.02.2023 11:43:58 ] Error message: Controller app\controllers\admin\IviPiviController not found | File: C:\OSPanel\domains\php-ishop.loc\vendor\amp\Router.php | Line: 39 
+ ==== 
+[ 19.02.2023 11:50:30 ] Error message: Controller app\controllers\admin\IviPiviController not found | File: C:\OSPanel\domains\php-ishop.loc\vendor\amp\Router.php | Line: 45 
+ ==== 
+[ 19.02.2023 11:50:33 ] Error message: Call to undefined function app\controllers\debub() | File: C:\OSPanel\domains\php-ishop.loc\app\controllers\MainController.php | Line: 12 
+ ==== 
+[ 19.02.2023 11:50:48 ] Error message: Call to undefined function app\controllers\debub() | File: C:\OSPanel\domains\php-ishop.loc\app\controllers\MainController.php | Line: 12 
+ ==== 
+[ 19.02.2023 11:50:56 ] Error message: Call to undefined function app\controllers\debub() | File: C:\OSPanel\domains\php-ishop.loc\app\controllers\MainController.php | Line: 12 
+ ==== 
+[ 19.02.2023 11:52:10 ] Error message: Call to undefined function app\controllers\debub() | File: C:\OSPanel\domains\php-ishop.loc\app\controllers\MainController.php | Line: 12 
+ ==== 
+[ 19.02.2023 11:57:47 ] Error message: Controller app\controllers\PageController not found | File: C:\OSPanel\domains\php-ishop.loc\vendor\amp\Router.php | Line: 45 
+ ==== 
+[ 19.02.2023 11:58:34 ] Error message: Method viewAction in controller app\controllers\PageController not found | File: C:\OSPanel\domains\php-ishop.loc\vendor\amp\Router.php | Line: 42 
+ ==== 
+[ 19.02.2023 12:00:23 ] Error message: Method vieewAction in controller app\controllers\PageController not found | File: C:\OSPanel\domains\php-ishop.loc\vendor\amp\Router.php | Line: 42 
+ ==== 
+[ 19.02.2023 12:02:21 ] Error message: Controller app\controllers\admin\MainController not found | File: C:\OSPanel\domains\php-ishop.loc\vendor\amp\Router.php | Line: 42 
+ ==== 
