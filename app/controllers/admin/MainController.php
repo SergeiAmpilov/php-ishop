@@ -4,7 +4,9 @@
 namespace app\controllers\admin;
 
 
-class MainController
+use amp\Controller;
+
+class MainController extends Controller
 {
     public function indexAction()
     {

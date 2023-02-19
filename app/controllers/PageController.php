@@ -4,7 +4,9 @@
 namespace app\controllers;
 
 
-class PageController
+use amp\Controller;
+
+class PageController extends Controller
 {
     public function indexAction()
     {
