@@ -8,6 +8,7 @@
       <sourceFolder url="file://$MODULE_DIR$/vendor/amp" isTestSource="false" packagePrefix="amp\" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/amp/helpers" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/gabordemooij/redbean" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

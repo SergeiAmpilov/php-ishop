@@ -12,5 +12,7 @@
             "email": "sergei.ampilov@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "gabordemooij/redbean": "^v5.7.3"
+    }
 }

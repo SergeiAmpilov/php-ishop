@@ -4,6 +4,7 @@
 
 use amp\Controller;
 /* @var string $test */
+/* @var array $names */
 
 //debug($this);
 ?>
@@ -11,3 +12,13 @@ use amp\Controller;
 <p>
     <?= $test ?>
 </p>
+
+<?php
+    if (!empty($names)) {
+        foreach ($names as $id => $name) { ?>
+            <p>
+                <b><?= $id ?></b> | <em><?= $name->name ?></em>
+            </p>
+        <?php }
+    }
+?>
