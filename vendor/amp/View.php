@@ -4,6 +4,8 @@
 namespace amp;
 
 
+use RedBeanPHP\R;
+
 class View
 {
     public string $content = '';
@@ -53,6 +55,39 @@ class View
         $out .= '<meta name="keywords" content="' . h($this->meta['keywords']) . '">';
 
         return $out;
+    }
+
+    public function getDbLogs()
+    {
+        if (DEBUG) {
+
+            $logs = R::getDatabaseAdapter()
+                        ->getDatabase()
+                        ->getLogger();
+
+            $allLogs = array_merge(
+                $logs->grep('SELECT'),
+                $logs->grep('INSERT'),
+                $logs->grep('DELETE')
+            );
+        }
+    }
+
+    public function getPart($file, $data = null)
+    {
+        if (is_array($data)) {
+            extract($data);
+        }
+
+        $file = APP . "/views/{$file}.php";
+
+        if (file_exists($file)) {
+            require $file;
+        } else {
+            throw new \Exception("No such view {$file}", 500);
+        }
+
+
     }
 
 }

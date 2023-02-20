@@ -6,27 +6,12 @@ use amp\View;
 /*  @var View $this */
 ?>
 
+<?php
+    $this->getPart("parts/header");
+?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?= $this->getMeta() ?>
-</head>
-<body>
+<?= $this->content ?>
 
-    <?= $this->content ?>
-
-
-</body>
-</html>
-
-
-<style>
-    body {
-        background-color: #404040;
-        color: wheat;
-    }
-</style>
+<?php
+    $this->getPart("parts/footer");
+?>
